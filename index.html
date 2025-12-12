@@ -24,22 +24,36 @@
         height: 100%;
       }
 
-      #highscore {
+/* ✔ Rekord – o‘ng yuqorida, qalin soya */
+#highscore {
   position: absolute;
-  top: 30px;
-  left: 30px;
-  font-size: 1.5em;
+  top: 1.5em;
+  right: 1em;
+  font-size: 2.2em;
   font-weight: 900;
+  color: white;
+  text-shadow:
+    3px 3px 0 #000000,
+    3.5px 3.5px 0 #000000,
+    4px 4px 0 #000000,
+    4.5px 4.5px 0 #000000;
 }
 
-
-      #score {
-        position: absolute;
-        top: 30px;
-        right: 30px;
-        font-size: 2em;
-        font-weight: 900;
-      }
+/* ✔ Score – markazda, KATTA, juda qalin soya */
+#score {
+  position: absolute;
+  top: 1.5em;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 5em;
+  font-weight: 900;
+  color: white;
+  text-shadow:
+    3px 3px 0 #000000,
+    3.5px 3.5px 0 #000000,
+    4px 4px 0 #000000,
+    4.5px 4.5px 0 #000000;
+}
 
       #introduction {
         width: 200px;
@@ -83,6 +97,19 @@
       #youtube-card {
         display: none;
       }
+
+/* Mobil ekran uchun rekordni kichikroq va yuqoriroq qilish */
+@media (max-width: 768px) {
+  #highscore {
+    font-size: 1.5em;   /* oldingi 2.2em edi */
+    top: 1em;         /* oldingi 1.5em edi */
+    right: 0.8em;       /* agar xohlasa, biroz chaproq */
+  }
+
+  #score {
+    font-size: 3.5em;   /* mobilda markaziy score ham biroz kichik */
+  }
+}
 
       @media (min-height: 425px) {
         #youtube {
